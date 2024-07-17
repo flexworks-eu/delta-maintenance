@@ -1,0 +1,33 @@
+[project]
+name = "delta-maintenance"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "jeroenflvr", email = "jeroen@flexworks.eu" }
+]
+dependencies = [
+    "pydantic>=2.8.2",
+    "deltalake>=0.18.2",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+"delta-maintenance" = "delta_maintenance:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pytest>=8.2.2",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/delta_maintenance"]
+
