@@ -10,8 +10,9 @@ from delta_maintenance.result import Result, Ok, Err
 
 
 
-def test_s3_details_default(s3_details: S3ClientDetails) -> None:
-    default_result = s3_details.default()
+def test_s3_details_default() -> None:
+    default_result = S3ClientDetails.default()
+    # default_result = s3_details.default()
     assert default_result.is_ok()
     assert default_result.unwrap() == S3ClientDetails(
         endpoint_host="s3.amazonaws.com",
@@ -19,7 +20,7 @@ def test_s3_details_default(s3_details: S3ClientDetails) -> None:
         addressing_style=VirtualAddressingStyle.Virtual,
         port=443,
         bucket=None,
-        secrets=None,
+        hmac_keys=None,
         scheme=S3Scheme.Https,
     )
 

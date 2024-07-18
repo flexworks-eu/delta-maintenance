@@ -10,32 +10,89 @@
 #   universal: false
 
 -e file:.
-annotated-types==0.7.0
+annotated-types==0.6.0
+    # via pydanclick
     # via pydantic
+certifi==2024.7.4
+    # via requests
+charset-normalizer==3.3.2
+    # via requests
 click==8.1.7
     # via delta-maintenance
+    # via pydanclick
 deltalake==0.18.2
     # via delta-maintenance
+docutils==0.21.2
+    # via readme-renderer
 flake8==7.1.0
     # via flake8-pyproject
 flake8-pyproject==1.2.3
     # via delta-maintenance
+idna==3.7
+    # via requests
+importlib-metadata==8.0.0
+    # via twine
+jaraco-classes==3.4.0
+    # via keyring
+jaraco-context==5.3.0
+    # via keyring
+jaraco-functools==4.0.1
+    # via keyring
+keyring==25.2.1
+    # via twine
+markdown-it-py==3.0.0
+    # via rich
 mccabe==0.7.0
     # via flake8
+mdurl==0.1.2
+    # via markdown-it-py
+more-itertools==10.3.0
+    # via jaraco-classes
+    # via jaraco-functools
+nh3==0.2.18
+    # via readme-renderer
 numpy==2.0.0
     # via pyarrow
+pkginfo==1.10.0
+    # via twine
 pyarrow==17.0.0
     # via deltalake
 pyarrow-hotfix==0.6
     # via deltalake
 pycodestyle==2.12.0
     # via flake8
+pydanclick==0.2.1
+    # via delta-maintenance
 pydantic==2.8.2
     # via delta-maintenance
+    # via pydanclick
 pydantic-core==2.20.1
+    # via pydanclick
     # via pydantic
 pyflakes==3.2.0
     # via flake8
+pygments==2.18.0
+    # via readme-renderer
+    # via rich
+readme-renderer==44.0
+    # via twine
+requests==2.32.3
+    # via requests-toolbelt
+    # via twine
+requests-toolbelt==1.0.0
+    # via twine
+rfc3986==2.0.0
+    # via twine
+rich==13.7.1
+    # via twine
+twine==5.1.1
+    # via delta-maintenance
 typing-extensions==4.12.2
+    # via pydanclick
     # via pydantic
     # via pydantic-core
+urllib3==2.2.2
+    # via requests
+    # via twine
+zipp==3.19.2
+    # via importlib-metadata

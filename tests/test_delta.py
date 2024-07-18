@@ -4,6 +4,7 @@ from deltalake import DeltaTable, write_deltalake
 import pandas as pd
 import logging
 import time
+import shutil
 import os
 import pytest
 
@@ -36,6 +37,8 @@ def delta_table_with_data(delta_table_path):
     assert len(dt_result.to_pandas()) == 22
 
     assert len(dt_result.files()) == 11
+
+    # shutil.copytree(delta_table_path, "/tmp/delta_table_backup")
 
     yield dt_result
 

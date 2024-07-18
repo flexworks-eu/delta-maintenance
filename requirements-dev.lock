@@ -10,62 +10,242 @@
 #   universal: false
 
 -e file:.
-annotated-types==0.7.0
+annotated-types==0.6.0
+    # via pydanclick
     # via pydantic
+antlr4-python3-runtime==4.13.1
+    # via moto
+attrs==23.2.0
+    # via jsonschema
+    # via referencing
+aws-sam-translator==1.89.0
+    # via cfn-lint
+aws-xray-sdk==2.14.0
+    # via moto
+blinker==1.8.2
+    # via flask
+boto3==1.34.144
+    # via aws-sam-translator
+    # via moto
+botocore==1.34.144
+    # via aws-xray-sdk
+    # via boto3
+    # via moto
+    # via s3transfer
 certifi==2024.7.4
     # via requests
+cffi==1.16.0
+    # via cryptography
+cfn-lint==1.8.0
+    # via moto
 charset-normalizer==3.3.2
     # via requests
 click==8.1.7
     # via delta-maintenance
+    # via flask
+    # via pydanclick
 coverage==7.6.0
     # via pytest-cov
+cryptography==42.0.8
+    # via joserfc
+    # via moto
 deltalake==0.18.2
     # via delta-maintenance
+docker==7.1.0
+    # via moto
+docutils==0.21.2
+    # via readme-renderer
 flake8==7.1.0
     # via flake8-pyproject
 flake8-pyproject==1.2.3
     # via delta-maintenance
+flask==3.0.3
+    # via flask-cors
+    # via moto
+flask-cors==4.0.1
+    # via moto
+graphql-core==3.2.3
+    # via moto
 idna==3.7
     # via requests
+importlib-metadata==8.0.0
+    # via twine
 iniconfig==2.0.0
     # via pytest
+itsdangerous==2.2.0
+    # via flask
+jaraco-classes==3.4.0
+    # via keyring
+jaraco-context==5.3.0
+    # via keyring
+jaraco-functools==4.0.1
+    # via keyring
+jinja2==3.1.4
+    # via flask
+    # via moto
+jmespath==1.0.1
+    # via boto3
+    # via botocore
+joserfc==1.0.0
+    # via moto
+jsondiff==2.1.2
+    # via moto
+jsonpatch==1.33
+    # via cfn-lint
+jsonpath-ng==1.6.1
+    # via moto
+jsonpointer==3.0.0
+    # via jsonpatch
+jsonschema==4.23.0
+    # via aws-sam-translator
+    # via openapi-schema-validator
+    # via openapi-spec-validator
+jsonschema-path==0.3.3
+    # via openapi-spec-validator
+jsonschema-specifications==2023.12.1
+    # via jsonschema
+    # via openapi-schema-validator
+keyring==25.2.1
+    # via twine
+lazy-object-proxy==1.10.0
+    # via openapi-spec-validator
+markdown-it-py==3.0.0
+    # via rich
+markupsafe==2.1.5
+    # via jinja2
+    # via werkzeug
 mccabe==0.7.0
     # via flake8
+mdurl==0.1.2
+    # via markdown-it-py
+more-itertools==10.3.0
+    # via jaraco-classes
+    # via jaraco-functools
+moto==5.0.11
+mpmath==1.3.0
+    # via sympy
+networkx==3.3
+    # via cfn-lint
+nh3==0.2.18
+    # via readme-renderer
 numpy==2.0.0
     # via pandas
     # via pyarrow
+openapi-schema-validator==0.6.2
+    # via openapi-spec-validator
+openapi-spec-validator==0.7.1
+    # via moto
 packaging==24.1
     # via pytest
 pandas==2.2.2
+pathable==0.4.3
+    # via jsonschema-path
+pkginfo==1.10.0
+    # via twine
 pluggy==1.5.0
     # via pytest
+ply==3.11
+    # via jsonpath-ng
+py-partiql-parser==0.5.5
+    # via moto
 pyarrow==17.0.0
     # via deltalake
 pyarrow-hotfix==0.6
     # via deltalake
 pycodestyle==2.12.0
     # via flake8
-pydantic==2.8.2
+pycparser==2.22
+    # via cffi
+pydanclick==0.2.1
     # via delta-maintenance
+pydantic==2.8.2
+    # via aws-sam-translator
+    # via delta-maintenance
+    # via pydanclick
 pydantic-core==2.20.1
+    # via pydanclick
     # via pydantic
 pyflakes==3.2.0
     # via flake8
+pygments==2.18.0
+    # via readme-renderer
+    # via rich
+pyparsing==3.1.2
+    # via moto
 pytest==8.2.2
     # via pytest-cov
 pytest-cov==5.0.0
 python-dateutil==2.9.0.post0
+    # via botocore
+    # via moto
     # via pandas
 pytz==2024.1
     # via pandas
+pyyaml==6.0.1
+    # via cfn-lint
+    # via jsondiff
+    # via jsonschema-path
+    # via moto
+    # via responses
+readme-renderer==44.0
+    # via twine
+referencing==0.35.1
+    # via jsonschema
+    # via jsonschema-path
+    # via jsonschema-specifications
+regex==2024.5.15
+    # via cfn-lint
 requests==2.32.3
+    # via docker
+    # via jsonschema-path
+    # via moto
+    # via requests-toolbelt
+    # via responses
+    # via twine
+requests-toolbelt==1.0.0
+    # via twine
+responses==0.25.3
+    # via moto
+rfc3339-validator==0.1.4
+    # via openapi-schema-validator
+rfc3986==2.0.0
+    # via twine
+rich==13.7.1
+    # via twine
+rpds-py==0.19.0
+    # via jsonschema
+    # via referencing
+s3transfer==0.10.2
+    # via boto3
+setuptools==71.0.3
+    # via moto
 six==1.16.0
     # via python-dateutil
+    # via rfc3339-validator
+sympy==1.13.0
+    # via cfn-lint
+twine==5.1.1
+    # via delta-maintenance
 typing-extensions==4.12.2
+    # via aws-sam-translator
+    # via cfn-lint
+    # via pydanclick
     # via pydantic
     # via pydantic-core
 tzdata==2024.1
     # via pandas
 urllib3==2.2.2
+    # via botocore
+    # via docker
     # via requests
+    # via responses
+    # via twine
+werkzeug==3.0.3
+    # via flask
+    # via moto
+wrapt==1.16.0
+    # via aws-xray-sdk
+xmltodict==0.13.0
+    # via moto
+zipp==3.19.2
+    # via importlib-metadata
