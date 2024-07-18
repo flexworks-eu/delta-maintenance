@@ -1,3 +1,4 @@
-def main() -> int:
-    print("Hello from delta-maintenance!")
-    return 0
+from delta_maintenance.cli.cli import cli
+
+def main(*args):
+    cli(*args)

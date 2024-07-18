@@ -12,18 +12,30 @@
 -e file:.
 annotated-types==0.7.0
     # via pydantic
+click==8.1.7
+    # via delta-maintenance
 deltalake==0.18.2
     # via delta-maintenance
+flake8==7.1.0
+    # via flake8-pyproject
+flake8-pyproject==1.2.3
+    # via delta-maintenance
+mccabe==0.7.0
+    # via flake8
 numpy==2.0.0
     # via pyarrow
 pyarrow==17.0.0
     # via deltalake
 pyarrow-hotfix==0.6
     # via deltalake
+pycodestyle==2.12.0
+    # via flake8
 pydantic==2.8.2
     # via delta-maintenance
 pydantic-core==2.20.1
     # via pydantic
+pyflakes==3.2.0
+    # via flake8
 typing-extensions==4.12.2
     # via pydantic
     # via pydantic-core

@@ -12,25 +12,60 @@
 -e file:.
 annotated-types==0.7.0
     # via pydantic
+certifi==2024.7.4
+    # via requests
+charset-normalizer==3.3.2
+    # via requests
+click==8.1.7
+    # via delta-maintenance
+coverage==7.6.0
+    # via pytest-cov
 deltalake==0.18.2
     # via delta-maintenance
+flake8==7.1.0
+    # via flake8-pyproject
+flake8-pyproject==1.2.3
+    # via delta-maintenance
+idna==3.7
+    # via requests
 iniconfig==2.0.0
     # via pytest
+mccabe==0.7.0
+    # via flake8
 numpy==2.0.0
+    # via pandas
     # via pyarrow
 packaging==24.1
     # via pytest
+pandas==2.2.2
 pluggy==1.5.0
     # via pytest
 pyarrow==17.0.0
     # via deltalake
 pyarrow-hotfix==0.6
     # via deltalake
+pycodestyle==2.12.0
+    # via flake8
 pydantic==2.8.2
     # via delta-maintenance
 pydantic-core==2.20.1
     # via pydantic
+pyflakes==3.2.0
+    # via flake8
 pytest==8.2.2
+    # via pytest-cov
+pytest-cov==5.0.0
+python-dateutil==2.9.0.post0
+    # via pandas
+pytz==2024.1
+    # via pandas
+requests==2.32.3
+six==1.16.0
+    # via python-dateutil
 typing-extensions==4.12.2
     # via pydantic
     # via pydantic-core
+tzdata==2024.1
+    # via pandas
+urllib3==2.2.2
+    # via requests

@@ -1,13 +1,15 @@
 [project]
 name = "delta-maintenance"
 version = "0.1.0"
-description = "Add your description here"
+description = "A convenient tool for delta maintenance."
 authors = [
     { name = "jeroenflvr", email = "jeroen@flexworks.eu" }
 ]
 dependencies = [
     "pydantic>=2.8.2",
     "deltalake>=0.18.2",
+    "click>=8.1.7",
+    "flake8-pyproject>=1.2.3",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
@@ -23,6 +25,11 @@ build-backend = "hatchling.build"
 managed = true
 dev-dependencies = [
     "pytest>=8.2.2",
+    "pyarrow>=17.0.0",
+    "requests>=2.32.3",
+    "pandas>=2.2.2",
+    "pytest-cov>=5.0.0",
+    "coverage>=7.6.0",
 ]
 
 [tool.hatch.metadata]
@@ -31,3 +38,27 @@ allow-direct-references = true
 [tool.hatch.build.targets.wheel]
 packages = ["src/delta_maintenance"]
 
+[tool.ruff.lint]
+# 1. Enable flake8-bugbear (`B`) rules, in addition to the defaults.
+select = ["E4", "E7", "E9", "F", "B"]
+
+# 2. Avoid enforcing line-length violations (`E501`)
+ignore = ["E501", "C0115"]
+
+# 3. Avoid trying to fix flake8-bugbear (`B`) violations.
+unfixable = ["B"]
+
+# 4. Ignore `E402` (import violations) in all `__init__.py` files, and in select subdirectories.
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402"]
+"**/{tests,docs,tools}/*" = ["E402"]
+
+[tool.ruff.format]
+# 5. Use single quotes in `ruff format`.
+quote-style = "single"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::DeprecationWarning"
+]
+addopts = "--cov=myproject --cov-report html"
